@@ -6,7 +6,9 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        checkout scm
+        // checkout scm
+        git branch: 'main', url: 'https://github.com/ginimessersmith/DP_springboot.git'
+        sh 'echo "checkout del repositorio completado"'
       }
     }
     stage('Build & Test') {
